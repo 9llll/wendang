@@ -1,0 +1,63 @@
+:root {
+  --theme-hue: 160;
+  --theme-saturation: 70%;
+  --theme-lightness: 42%;
+  --theme-color: hsl(160, 70%, 42%);
+
+  --sidebar-width: 280px;
+  --border-radius: 12px;
+  --content-max-width: 900px;
+  --content-padding: 24px;
+}
+
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  background-color: #fafdfb;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 移动端适配核心 */
+@media (max-width: 768px) {
+  :root {
+    --content-padding: 16px;
+    --sidebar-width: 240px;
+  }
+
+  .markdown-section {
+    padding: 20px 16px !important;
+    font-size: 15px !important;
+  }
+
+  .app-nav {
+    margin-top: 12px !important;
+  }
+}
+
+/* 桌面端舒适布局 */
+@media (min-width: 769px) {
+  .markdown-section {
+    padding: 35px 40px !important;
+  }
+}
+
+/* 内容卡片样式（超好看） */
+.markdown-section {
+  background: #ffffff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  margin-bottom: 20px;
+}
+
+/* 标题优化 */
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3 {
+  color: #2a2a2a;
+  font-weight: 500;
+}
+
+/* 搜索框美化 */
+.search input {
+  border-radius: 8px !important;
+  border: 1px #eee solid !important;
+}
